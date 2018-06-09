@@ -17,6 +17,14 @@ BuildRequires:	perl-devel
 %description
 Fast prototype-based OO programming in Perl
 
+%package GraphViz
+Summary:	Graph a Perl object structure with GraphViz
+Group:		Development/Perl
+Requires:	%{name} = %{EVRD}
+
+%description GraphViz
+Graph a Perl object structure with GraphViz
+
 %prep
 %setup -qn %{modname}-%{modver}
 
@@ -33,4 +41,8 @@ Fast prototype-based OO programming in Perl
 %files
 %doc README
 %{perl_vendorlib}/Class/*
+%exclude %{perl_vendorlib}/Class/Prototyped/Graph.pm
 %{_mandir}/man3/*
+
+%files GraphViz
+%{perl_vendorlib}/Class/Prototyped/Graph.pm
