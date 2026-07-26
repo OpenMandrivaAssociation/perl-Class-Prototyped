@@ -1,14 +1,12 @@
 %define modname	Class-Prototyped
-%define modver 1.13
-
 Summary:	Fast prototype-based OO programming in Perl
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	3
+Version:	1.13
+Release:	4
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Class/%{modname}-%{modver}.tar.gz
+Url:		https://metacpan.org/dist/%{modname}
+Source0:	http://www.cpan.org/modules/by-module/Class/%{modname}-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl(Test)
@@ -27,7 +25,7 @@ Requires:	%{name} = %{EVRD}
 Graph a Perl object structure with GraphViz
 
 %prep
-%setup -qn %{modname}-%{modver}
+%setup -qn %{modname}-%{version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor </dev/null
