@@ -1,8 +1,8 @@
 %define modname	Class-Prototyped
 Summary:	Fast prototype-based OO programming in Perl
 Name:		perl-%{modname}
-Version:	1.13
-Release:	4
+Version:	1.16
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/%{modname}
@@ -25,7 +25,7 @@ Requires:	%{name} = %{EVRD}
 Graph a Perl object structure with GraphViz
 
 %prep
-%setup -qn %{modname}-%{version}
+%setup -qn %{modname}-%{version} -n Class-Prototyped-1.16
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor </dev/null
